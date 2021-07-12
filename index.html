@@ -179,6 +179,48 @@
 		}
 		/*end experiences section*/
 
+		/*projects section*/
+		#projects{
+			padding: 10px 0 30px 0;
+			text-align: center;
+		}
+		.project-container{
+			border-radius: 20px;
+			margin: 10px auto;
+			width: 70%;
+			overflow: hidden;
+			position: relative;
+		}
+		.overlay{
+			opacity: 0;
+			width: 100%;
+			height: 100%;
+			background-color: black;
+			position: absolute;
+			top: 0;
+  			left: 0;
+  			color: white;
+		}
+		.overlay p{
+			position: relative;
+			top: 43%;
+		}
+		.project-container:hover .overlay{
+			opacity:  0.7;
+			transition: all 0.75s 0s;
+			cursor: pointer;
+		}
+		.project-desc{
+			margin: 0 auto;
+			width: 70%;
+			text-align: left;
+			font-size: 12px;
+		}
+		#iu-project{
+			width: 100%;
+		}
+		/*end projects section*/
+
 		/*resume section*/
 		#resume{
 			padding: 10px 50px 30px 50px;
@@ -192,7 +234,6 @@
 		#resume span{
 			font-size: 12px;
 			font-weight: bolder;
-			color: white;
 		}
 		/*end resume section*/
 
@@ -340,6 +381,14 @@
 			#about-me-right{
 				display: none;
 			}
+			.project-container{
+				border-radius: 10px;
+				width: 90%;
+			}
+			.project-desc{
+				width: 90%;
+				font-size: 12px;
+			}
 			#resume-pdf{
 				height: 480px;
 			}
@@ -360,32 +409,27 @@
 	<!-- nav bar -->
 	<div id = "nav-menu">
 	    <img id = "hamburger" src = "img/hamburgericon.png">
-	    <a href = "main_page.html#welcome">
+	    <a href = "index.html#welcome">
 	      <div class = "nav-buttons">
 	        HOME
 	      </div>
 	    </a>
-	    <a href = "main_page.html#about-me">
+	    <a href = "index.html#about-me">
 	      <div class = "nav-buttons">
 	        ABOUT ME
 	      </div>
 	    </a>
-	    <a href = "main_page.html#experiences">
+	    <a href = "index.html#experiences">
 	      <div class = "nav-buttons">
 	        EXPERIENCES
 	      </div>
 	    </a>
-	    <a href = "projects.html">
+	    <a href = "index.html#projects">
 	      <div class = "nav-buttons">
 	        PROJECTS
 	      </div>
 	    </a>
-	    <a href = "interests.html">
-	      <div class = "nav-buttons">
-	        INTERESTS
-	      </div>
-	    </a>
-	    <a href = "main_page.html#resume">
+	    <a href = "index.html#resume">
 	      <div class = "nav-buttons">
 	        RESUME
 	      </div>
@@ -507,16 +551,37 @@
 		</div>
 		<!-- timeline end -->
 
-		<div class = "pink" id = "resume">
+		<!-- projects section -->
+		<div class = "pink" id = "projects">
+			<h1>PROJECTS</h1>
+			<a href = "https://viterbi-web.usc.edu/~sxfan/itp104/final_project/fp_homepage.html" target = "_blank">
+				<div class = "project-container">
+					<div class = "overlay">
+						<p>IU Fanpage Website</p>
+					</div>
+					<img id = "iu-project" src = "img/iupage.png" alt = "IU Project Screenshot">
+				</div>
+			</a>
+			<div class = "project-desc">
+				Final project for ITP 104: Web Publishing (May 2021). Click to visit the page!
+			</div><br>
+			...and more coming soon!
+
+		</div>
+		<!-- projects end -->
+
+		<!-- resume -->
+		<div class = "peach" id = "resume">
 			<h1>RESUME</h1>
 			<iframe src = "resume.pdf" id = "resume-pdf"></iframe><br>
 			<span>
-				<em>Updated April 2021.</em>
-				<a href = "resume.pdf" id = "resume-open" target = "_blank" style = "color:white;">
-					Click HERE to open in a new tab!
+				<em>As of April 2021.</em>
+				<a href = "resume.pdf" id = "resume-open" target = "_blank" style = "color:black;">
+					Click <span style = "text-decoration: underline;">HERE</span> to open in a new tab!
 				</a>
 			</span>
 		</div>
+		<!-- resume end -->
 		<footer>
 			made by Samantha Fan, 2021<br>
 			contact: <a href = "mailto:samanthaxfan@gmail.com" style = "color: white; text-decoration: underline;">samanthaxfan@gmail.com</a>
