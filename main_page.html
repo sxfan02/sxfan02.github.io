@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		Samantha Fan | Home
+	</title>
+	  <link href = "timeline.css" rel = "stylesheet">
+
+	<style>
+		/*fonts*/
+		@font-face{
+			font-family: "Noto Sans";
+			src: url("fonts/NotoSans-Regular.ttf");
+		}
+		@font-face{
+			font-family: "Noto Sans Thin";
+			src: url("fonts/NotoSansKR-Thin.otf");
+		}
+		/*end fonts*/
+
+		/*tags*/
+		a:link {
+		  text-decoration: none;
+		}
+
+		a:visited {
+		  text-decoration: none;
+		}
+
+		html,
+		 body{
+			height:  100%;
+			margin:  0;
+			background-color: peachpuff;
+			font-family: "Noto Sans Thin", Arial, sans-serif;
+		}
+
+		h1{ 
+			color: white;
+			margin: 0;
+			padding: 20px 0;
+			font-family: "Noto Sans", Arial, sans-serif;
+		}
+		/*end tags*/
+
+		/*general classes*/
+		#full-page{
+			margin:  0;
+			width:  calc(100% - 57px);
+		}
+
+		.pink{
+			background-color: rgb(255, 171, 175);
+			transition:  width 0.75s 0s;
+		}
+
+		.peach{
+			transition:  width 0.75s 0s; 
+			background-color: peachpuff;	
+		}
+		/*end general classes*/
+
+		/*welcome section*/
+		#welcome{
+			text-align:  center;
+			display: flex;
+			flex-flow: row;
+			padding: 20px 0;
+			background-image: url("img/pattern.png");
+
+		}
+
+		#welcome-left{
+			width:  50%;
+			border-right: 1px #904E55 dashed;
+		}
+
+		#welcome-right{
+			width:  50%;
+			position: relative;
+			/*to handle fade-in on name*/
+			animation: fadeIn linear 1.5s;
+			-webkit-animation: fadeIn linear 1.5s;
+			-moz-animation: fadeIn linear 1.5s;
+			-o-animation: fadeIn linear 1.5s;
+			-ms-animation: fadeIn linear 1.5s;
+		}
+
+		#profile-img-container{
+			border: 2px #904E55 solid;
+			border-radius:  250px;
+			max-width:  400px;
+			overflow: hidden;
+			height:  550px;
+			margin: 40px auto;
+		}
+
+		#profile-img{
+			width: 400px;
+		}
+
+		#welcome-text{
+			position: relative;
+			top: 30%;
+			margin: 0 auto;
+			background-color: peachpuff;
+			width: 70%;
+			padding: 60px 0;
+			border-radius: 20px;
+			border: 2px white solid;
+		}
+
+		#my-name{
+			color:  white;
+			font-size: 48px;
+			font-family: "Noto Sans", Arial, sans-serif;
+		}
+
+		#ltc{
+			color:  white;
+			font-size: 36px;
+			font-family: "Noto Sans", Arial, sans-serif;
+		}
+
+		#welcome-logos{
+			position: absolute;
+			bottom: 0;
+			right: 50px;
+		}
+
+		#linkedin-logo{
+			width:  50px;
+			margin: 0 3px;
+		}
+
+		#github-logo{
+			width:  45px;
+			margin: 0 3px;
+		}
+		/*end welcome section*/
+
+		/*about me section*/
+		#about-me{
+			padding: 10px 50px 40px 50px;
+			display: flex;
+			flex-flow:  row;
+		}
+
+		#about-me-left{
+			width: 60%;
+			padding-right: 30px;
+		}
+
+		#about-me-right{
+			padding-top: 30px;
+			padding-bottom: 10px;
+			width: 40%;
+		}
+
+		#main-img-container{
+			width: 85%;
+			margin: 0 auto;
+			border: 2px white solid;
+			overflow: hidden;
+			object-position: -20px center;
+			border-radius:  15px;
+		}
+
+		#main-img{
+			float:  right;
+			width: 100%;
+		}
+		/*end about me section*/
+
+		/*experiences section*/
+		#experiences{
+			padding: 10px 50px 30px 50px;
+		}
+		/*end experiences section*/
+
+		/*resume section*/
+		#resume{
+			padding: 10px 50px 30px 50px;
+			text-align: center;
+		}
+		#resume-pdf{
+			margin: 20px 0 5px 0;
+			width: 90%;
+			height: 1000px;
+		}
+		#resume span{
+			font-size: 12px;
+			font-weight: bolder;
+			color: white;
+		}
+		/*end resume section*/
+
+		/*footer*/
+		footer{
+			background-color: #323336;
+			text-align: center;
+			color: white;
+			font-size: 12px;
+			padding: 5px 0;
+		}
+		/*end footer*/
+
+		/*keyframes for fade-in*/
+		@keyframes fadeIn {
+			0% {opacity:0;}
+			100% {opacity:1;}
+		}
+
+		@-moz-keyframes fadeIn {
+			0% {opacity:0;}
+			100% {opacity:1;}
+		}
+
+		@-webkit-keyframes fadeIn {
+			0% {opacity:0;}
+			100% {opacity:1;}
+		}
+
+		@-o-keyframes fadeIn {
+			0% {opacity:0;}
+			100% {opacity:1;}
+		}
+
+		@-ms-keyframes fadeIn {
+			0% {opacity:0;}
+			100% {opacity:1;}
+		}
+		/*end keyframes for fade-in*/
+
+		/*nav menu*/
+		/*the white background*/
+		#nav-menu{
+		    position: fixed;
+		    top:  0;
+		    right:  0;
+		    width:  57px;
+		    height: 100%;
+		    background-color: white;
+		    box-shadow: 1px 0 5px darkslategray;
+
+		    z-index: 2;
+
+		    display:  flex;
+		    flex-flow:  column;
+		      
+		    transition:  width 0.75s 0s; 
+	    }
+    	
+    	/*3 bars hamburger menu*/
+	    #hamburger{
+			width:  20px;
+		    position:  absolute;
+		    top:  20px;
+		    right:  18.5px;
+	    }
+    	
+    	/*the buttons themselves*/
+	    .nav-buttons{    	
+			padding:  20px 10px 20px 10px;
+			margin: 10px auto 10px auto;
+
+			color:  #904E55;
+			text-align:  center;
+			font-family: "Noto Sans";
+		    text-decoration: none;
+		    font-size: 20px;
+		    text-align:  center;
+		    box-shadow: 0px 1px 5px darkslategray;
+		      		      
+		    position: relative;
+		    width:  85%;
+		    top: 50px;
+		    display:  none;
+	    }
+
+	    #nav-menu:hover{
+	    	width:  400px;
+	    }
+
+	    #nav-menu:hover .nav-buttons{
+		    display:  block;
+	    }
+
+	    #nav-menu:hover + #full-page #outer-left,
+		#nav-menu:hover + #full-page #outer-right{
+			width: calc(50% - 225px);
+		}
+		/*end nav menu*/
+
+		/*for mobile devices*/
+		@media screen and (max-width: 600px) {
+			#full-page {
+		    	width: calc(100% - 30px);
+			}
+			#welcome{
+				flex-flow: column;
+				background-image: none;
+			}
+			#welcome-left{
+				width: 100%;
+				border-right: none;
+			}
+			#welcome-right{
+				width: 100%;
+				position: initial;
+			}
+			#profile-img-container{
+				height:  400px;
+				margin: 15px auto 25px auto;
+			}
+			#welcome-text{
+				width: auto;
+				border: none;
+				background-color: clear;
+				border-radius: 0px;
+				padding: 0;
+			}
+			#welcome-logos{
+				margin-top: 20px;
+				position: initial;
+			}
+			#linkedin-logo{
+				width: 30px;
+			}
+			#github-logo{
+				width: 28px;
+			}
+			#about-me{
+				padding-right: 20px;
+			}
+			#about-me-left{
+				width: 100%;
+			}
+			#about-me-right{
+				display: none;
+			}
+			#resume-pdf{
+				height: 480px;
+			}
+			#nav-menu{
+				width: 30px;
+			}
+			#hamburger{
+				top: 5px;
+				right: 5px;
+			}
+			#nav-menu:hover{
+				width: 85%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- nav bar -->
+	<div id = "nav-menu">
+	    <img id = "hamburger" src = "img/hamburgericon.png">
+	    <a href = "main_page.html#welcome">
+	      <div class = "nav-buttons">
+	        HOME
+	      </div>
+	    </a>
+	    <a href = "main_page.html#about-me">
+	      <div class = "nav-buttons">
+	        ABOUT ME
+	      </div>
+	    </a>
+	    <a href = "main_page.html#experiences">
+	      <div class = "nav-buttons">
+	        EXPERIENCES
+	      </div>
+	    </a>
+	    <a href = "projects.html">
+	      <div class = "nav-buttons">
+	        PROJECTS
+	      </div>
+	    </a>
+	    <a href = "interests.html">
+	      <div class = "nav-buttons">
+	        INTERESTS
+	      </div>
+	    </a>
+	    <a href = "main_page.html#resume">
+	      <div class = "nav-buttons">
+	        RESUME
+	      </div>
+	    </a>
+   </div>
+   <!-- nav bar end -->
+
+   <!-- content -->
+	<div id = "full-page">
+		<!-- welcome -->
+		<div class = "peach" id = "welcome">
+			<div id = welcome-left>
+				<div id = "profile-img-container">
+					<img id = "profile-img" src = "img/profilephoto.png" alt = "Image of Me">
+				</div>
+			</div>
+			<div id = "welcome-right">
+				<div id = "welcome-text">
+					Nice to meet you! I'm <br><span id = "my-name"> SAMANTHA FAN </span><br>
+					and I <span id = "ltc">LOVE TO CODE.</span>
+				</div>
+				<div id = "welcome-logos">
+					<a href = "https://www.linkedin.com/in/samantha-fan/" target = "_blank">
+						<img id = "linkedin-logo" src = "img/linkedinlogo.png" alt = "Linkedin">
+					</a>
+					<a href = "https://github.com/sxfan02" target = "_blank">
+						<img id = "github-logo" src = "img/githublogo.png" alt = "Github">
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- welcome end -->
+
+		<!-- about me -->
+		<div class = "pink" id = "about-me">
+			<div id = "about-me-left">
+				<h1>
+					ABOUT ME
+				</h1>
+				I am a sophomore majoring in Computer Science at the University of Southern California. Since high school, I've always enjoyed learning about and working with computers, and specifically programming—so it's only natural that I'm studying computer science! The way that coding incorporates both logic and creativity to create endless possibilities speaks to me, and I want to learn all that I can about it!
+				<br> <br>
+
+				Most recently, I've been working at iDTech, a youth STEM Education company, to help deliver this same feeling to my students; it has been a rewarding experience and has also served to solidify my own passion for coding!
+				<br> <br>
+				
+				I am currently looking to gain professional software engineering (or related) experience through internships or other projects. I love a good challenge and am always excited to devote myself to a piece of work! If you would like to connect, please reach out to <a href = "mailto:samanthaxfan@gmail.com">samanthaxfan@gmail.com</a>, and I would love to speak with you!
+			</div>
+			<div id = "about-me-right">
+				<div id = "main-img-container">
+					<img id = "main-img" src = "img/mainphoto.jpg" alt = "Image of me">
+				</div>
+			</div>
+		</div>
+		<!-- about me end -->
+
+		<!-- timeline -->
+		<div class = "peach" id = "experiences">
+		<h1 style = "text-align: center;">EXPERIENCES</h1>
+		<div id = "timeline">
+			<div class="container left">
+			    <div class="content">
+			    	<h2>2021</h2>
+			    	<ul>
+			        	<li>
+			        		Completed JPMorgan Chase - Software Engineering Virtual Experience (June)
+			        	</li>
+			        	<li>
+			        		<strong>Started position as Virtual Tech Camp Instructor at iDTech</strong> (June)
+			        	</li>
+			        	<li>
+			        		Attained Fall 2020 Dean's List (February)
+			        	</li>
+			      	</ul>
+			    </div>
+			</div>
+			<div class="container right">
+			    <div class="content">
+			    	<h2>2020</h2>
+			    	<ul>
+			        	<li>
+			        		<strong>Entered University of Southern California, Los Angeles, CA</strong> (August)
+				        </li>
+				        <li>
+				        	Graduated from Libertyville High School, Libertyville, IL (May)
+				        </li>
+				        <li>
+				        	Named National Merit Finalist (February)
+				        </li>
+				    </ul>
+			    </div>
+			</div>
+			<div class="container left">
+				<div class="content">
+			    	<h2>2019</h2>
+			    	<ul>
+			    		<li>
+			        		Named National Merit Semifinalist (September)
+			    		</li>
+			    		<li>
+			    			<strong>Started position as a Code Instructor at Code Ninjas, Libertyville, IL</strong> (August)
+			    		</li>
+			    		<li>
+							Received Illinois Council of Teachers of Mathematics' (ICTM) Certificate of Achievement  (May)
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="container right">
+				<div class="content">
+					<h2>2018</h2>
+					<ul>
+						<li>
+							<strong>Started position as Center Assistant at Kumon Math and Reading, Vernon Hills, IL</strong> (December)
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!-- timeline end -->
+
+		<div class = "pink" id = "resume">
+			<h1>RESUME</h1>
+			<iframe src = "resume.pdf" id = "resume-pdf"></iframe><br>
+			<span>
+				<em>Updated April 2021.</em>
+				<a href = "resume.pdf" id = "resume-open" target = "_blank" style = "color:white;">
+					Click HERE to open in a new tab!
+				</a>
+			</span>
+		</div>
+		<footer>
+			made by Samantha Fan, 2021<br>
+			contact: <a href = "mailto:samanthaxfan@gmail.com" style = "color: white; text-decoration: underline;">samanthaxfan@gmail.com</a>
+		</footer>
+	</div>
+	<!-- content end -->
+
+</body>
+</html>
