@@ -104,21 +104,21 @@
 			position: relative;
 			top: 30%;
 			margin: 0 auto;
-			background-color: peachpuff;
+			background-color: white;
 			width: 70%;
 			padding: 60px 0;
 			border-radius: 20px;
-			border: 2px white solid;
+			box-shadow: 0 0 10px #904E55;
 		}
-
+		
 		#my-name{
-			color:  white;
+			color: rgb(255, 171, 175);
 			font-size: 48px;
 			font-family: "Noto Sans", Arial, sans-serif;
 		}
 
 		#ltc{
-			color:  white;
+			color: rgb(255, 171, 175);
 			font-size: 36px;
 			font-family: "Noto Sans", Arial, sans-serif;
 		}
@@ -127,6 +127,12 @@
 			position: absolute;
 			bottom: 0;
 			right: 50px;
+			font-size: 18px;
+		}
+
+		#email-logo{
+			margin: 0 10px;
+			width: 45px;
 		}
 
 		#linkedin-logo{
@@ -189,6 +195,7 @@
 			margin: 10px auto;
 			width: 70%;
 			overflow: hidden;
+			object-fit: cover;
 			position: relative;
 		}
 		.overlay{
@@ -225,11 +232,6 @@
 		#resume{
 			padding: 10px 50px 30px 50px;
 			text-align: center;
-		}
-		#resume-pdf{
-			margin: 20px 0 5px 0;
-			width: 90%;
-			height: 1000px;
 		}
 		#resume span{
 			font-size: 12px;
@@ -366,6 +368,9 @@
 				margin-top: 20px;
 				position: initial;
 			}
+			#email-logo{
+				width:  30px;
+			}
 			#linkedin-logo{
 				width: 30px;
 			}
@@ -441,7 +446,7 @@
 	<div id = "full-page">
 		<!-- welcome -->
 		<div class = "peach" id = "welcome">
-			<div id = welcome-left>
+			<div id = "welcome-left">
 				<div id = "profile-img-container">
 					<img id = "profile-img" src = "img/profilephoto.png" alt = "Image of Me">
 				</div>
@@ -452,6 +457,10 @@
 					and I <span id = "ltc">LOVE TO CODE.</span>
 				</div>
 				<div id = "welcome-logos">
+					<span style = "text-decoration: underline;">CONTACT ME:</span>
+					<a href = "mailto:samanthaxfan@gmail.com">
+						<img id = "email-logo" src = "img/gmaillogo.png" alt = "Gmail">
+					</a>
 					<a href = "https://www.linkedin.com/in/samantha-fan/" target = "_blank">
 						<img id = "linkedin-logo" src = "img/linkedinlogo.png" alt = "Linkedin">
 					</a>
@@ -469,15 +478,15 @@
 				<h1>
 					ABOUT ME
 				</h1>
-				I am a sophomore majoring in Computer Science at the University of Southern California. Since high school, I've always enjoyed learning about and working with computers, and specifically programming—so it's only natural that I'm studying computer science! The way that coding incorporates both logic and creativity to create endless possibilities speaks to me, and I want to learn all that I can about it!
+				I am a sophomore majoring in Computer Science at the University of Southern California. Since high school, I've always enjoyed learning about and working with computers, and specifically programming—so it's only natural that I'm studying computer science! The way that coding incorporates both logic and creativity to create endless possibilities speaks to me, and I want to learn all that I can about it.
 				<br> <br>
 
-				Most recently, I've been working at iDTech, a youth STEM Education company, to help deliver this same feeling to my students; it has been a rewarding experience and has also served to solidify my own passion for coding!
+				Most recently, I've been working at iDTech (a STEM Education company for pre-college students) to help deliver this same feeling to my students. It has been a rewarding experience and has also served to solidify my own passion for coding!
 				<br> <br>
 				
-				I am currently looking to gain professional software engineering (or related) experience through internships or other projects. I love a good challenge and am always excited to devote myself to a piece of work! If you would like to connect, please reach out to <a href = "mailto:samanthaxfan@gmail.com">samanthaxfan@gmail.com</a>, and I would love to speak with you!
+				I am currently looking to gain professional software engineering (or related) experience through internships or other projects; I love a good challenge and am always excited to devote myself to a piece of work. If you would like to connect, please reach out to <a href = "mailto:samanthaxfan@gmail.com">samanthaxfan@gmail.com</a>, and I would love to speak with you!
 			</div>
-			<div id = "about-me-right">
+			<div id = "about-me-right" class = "fade">
 				<div id = "main-img-container">
 					<img id = "main-img" src = "img/mainphoto.jpg" alt = "Image of me">
 				</div>
@@ -488,8 +497,8 @@
 		<!-- timeline -->
 		<div class = "peach" id = "experiences">
 		<h1 style = "text-align: center;">EXPERIENCES</h1>
-		<div id = "timeline">
-			<div class="container left">
+		<div id = "timeline" class = "fade">
+			<div class="container left fade">
 			    <div class="content">
 			    	<h2>2021</h2>
 			    	<ul>
@@ -505,7 +514,7 @@
 			      	</ul>
 			    </div>
 			</div>
-			<div class="container right">
+			<div class="container right fade">
 			    <div class="content">
 			    	<h2>2020</h2>
 			    	<ul>
@@ -521,7 +530,7 @@
 				    </ul>
 			    </div>
 			</div>
-			<div class="container left">
+			<div class="container left fade">
 				<div class="content">
 			    	<h2>2019</h2>
 			    	<ul>
@@ -537,7 +546,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="container right">
+			<div class="container right fade">
 				<div class="content">
 					<h2>2018</h2>
 					<ul>
@@ -555,7 +564,7 @@
 		<div class = "pink" id = "projects">
 			<h1>PROJECTS</h1>
 			<a href = "https://viterbi-web.usc.edu/~sxfan/itp104/final_project/fp_homepage.html" target = "_blank">
-				<div class = "project-container">
+				<div class = "project-container fade">
 					<div class = "overlay">
 						<p>IU Fanpage Website</p>
 					</div>
@@ -573,11 +582,13 @@
 		<!-- resume -->
 		<div class = "peach" id = "resume">
 			<h1>RESUME</h1>
-			<iframe src = "resume.pdf" id = "resume-pdf"></iframe><br>
 			<span>
-				<em>As of April 2021.</em>
+				<em>As of April 2021.</em><br>
 				<a href = "resume.pdf" id = "resume-open" target = "_blank" style = "color:black;">
 					Click <span style = "text-decoration: underline;">HERE</span> to open in a new tab!
+				</a><br>
+				<a href = "resume.pdf" download = "FanSamantha_Resume" style = "color:black;">
+					Click <span style = "text-decoration: underline;">HERE</span> to download a copy!
 				</a>
 			</span>
 		</div>
@@ -588,6 +599,29 @@
 		</footer>
 	</div>
 	<!-- content end -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+	<script>
+		$(window).on("load",function() {
+			$(window).scroll(function() {
+				var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+				$(".fade").each(function() {
+					/* Check the location of each desired element */
+					var objectBottom = $(this).offset().top;
+					/* If the element is completely within bounds of the window, fade it in */
+			 		if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+						if ($(this).css("opacity")==0) {
+							$(this).fadeTo(500,1);
+						}
+					} else { //object goes out of view (scrolling up)
+						if ($(this).css("opacity")==1) {
+							$(this).fadeTo(500,0);
+						}
+					}
+				});
+		 	}).scroll(); //invoke scroll-handler on page-load
+		});
+	</script>
 
 </body>
 </html>
