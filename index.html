@@ -59,6 +59,9 @@
 			transition:  width 0.75s 0s; 
 			background-color: peachpuff;	
 		}
+		.clearfloat{
+			clear: both;
+		}
 		/*end general classes*/
 
 		/*welcome section*/
@@ -232,6 +235,27 @@
 		#resume{
 			padding: 10px 50px 30px 50px;
 			text-align: center;
+		}
+		#resume-body{
+			text-align: left;
+			font-family: serif;
+		}
+		#resume-name{
+			font-size: 34px;
+			font-weight: bold;
+			margin-bottom: 0;
+		}
+		.resume-left{
+			width: 66%;
+			float: left;
+		}
+		.resume-right{
+			width: 34%;
+			float: left;
+			text-align: right;
+		}
+		#resume-body ul{
+			margin-top:  0;
 		}
 		#resume span{
 			font-size: 12px;
@@ -585,14 +609,173 @@
 
 		<!-- resume -->
 		<div class = "peach" id = "resume">
-			<h1>RESUME</h1>
+			<h1 style = "padding-bottom: 0px;">RESUME</h1>
+			<div id = "resume-body">
+				<h2 id = "resume-name">Samantha Fan</h2>
+				3335 S Figueroa St #555 | Los Angeles, CA 90007 <br>
+				samanthaxfan@gmail.com  |  (847) 219-5468 <br>
+
+				<h3 class = "resume-header">EDUCATION</h3>
+				<hr>
+				<div class = "resume-block">
+					<div class = "resume-left">
+						<strong>University of Southern California, Los Angeles, CA</strong><br>
+						<em>Bachelor of Science in Computer Science</em>
+					</div>
+					<div class = "resume-right">
+						August 2020-May 2024
+					</div>
+					<div class = "clearfloat"></div>
+					<ul>
+						<li>
+							GPA: 3.93
+						</li>
+						<li>
+							Relevant Coursework: Calculus III, Discrete Methods in Computer Science, Linear Algebra and Linear Differential Equations, Data Structures and Object-Oriented Design (C++)
+						</li>
+						<li>
+							In Progress: Principles of Software Development (Java), Introduction to Embedded Systems, Introduction to Algorithms and Theory of Computing
+						</li>
+						<li>
+							Presidential Scholar, Dean’s List (Fall 2020)
+						</li>
+					</ul>
+				</div>
+				<div class = "resume-block">
+					<div class = "resume-left">
+						<strong>Libertyville High School, Libertyville, IL</strong><br>
+						<em>High School Diploma</em>
+					</div>
+					<div class = "resume-right">
+						August 2016-May 2020
+					</div>
+					<div class = "clearfloat"></div>
+					<ul>
+						<li>
+							GPA: 4.68
+						</li>
+						<li>
+							National Honor Society, National Merit Finalist, AP Scholar with Distinction
+						</li>
+					</ul>
+				</div>
+
+				<h3 class = "resume-header">SKILLS</h3>
+				<hr>
+				<strong>Technical Skills</strong>:
+				<ul style = "margin-bottom: 0;">
+					<li>
+						C++, Java, Python, JavaScript, CSS, HTML
+					</li>
+					<li>
+						Unity
+					</li>
+					<li>
+						Microsoft Office Suite, Google Workspace, Git
+					</li>
+				</ul>
+				<strong>Languages</strong>:
+				<ul>
+					<li>
+						Conversational Mandarin
+					</li>
+				</ul>
+
+				<h3 class = "resume-header">WORK EXPERIENCE</h3>
+				<hr>
+				<div class = "resume-block">
+					<div class = "resume-left">
+						<strong>iDTech, Remote</strong><br>
+						<em>Virtual Tech Camp Instructor</em>
+					</div>
+					<div class = "resume-right">
+						May 2021-August 2021
+					</div>
+					<div class = "clearfloat"></div>
+					<ul>
+						<li>
+							Hosted week-long online tech camps (C++, Java, JavaScript, Unity) for students aged 12-18 in small groups, familiarizing them with core programming concepts and language-specific syntax
+						</li>
+						<li>
+							Prepared materials and curriculum outside of class-time to present a personalized experience to students
+						</li>
+						<li>
+							Met with team leaders biweekly to discuss recent progress reports and behavioral trends, to enhance the student experience
+						</li>
+					</ul>
+				</div>
+				<div class = "resume-block">
+					<div class = "resume-left">
+						<strong>Code Ninjas, Libertyville, IL</strong><br>
+						<em>Code Instructor</em>
+					</div>
+					<div class = "resume-right">
+						August 2019-August 2020
+					</div>
+					<div class = "clearfloat"></div>
+					<ul>
+						<li>
+							Guided students aged 7+ through JavaScript coding projects
+						</li>
+						<li>
+							Led frequent facility tours for prospective students to introduce them to the curriculum
+						</li>
+						<li>
+							Worked with 2 other team members to smoothly manage 20-25 students per shift
+						</li>
+					</ul>
+				</div>
+				<div class = "resume-block">
+					<div class = "resume-left">
+						<strong>Kumon Math and Reading, Mundelein, IL</strong><br>
+						<em>Center Assistant</em>
+					</div>
+					<div class = "resume-right">
+						December 2018-August 2019
+					</div>
+					<div class = "clearfloat"></div>
+					<ul>
+						<li>
+							Developed fundamental reading and counting skills in preschool/early elementary children
+						</li>
+						<li>
+							Tutored students on elementary and middle school level math and reading topics to build understanding
+						</li>
+						<li>
+							Graded students’ in-class and weekly homework assignments according to an answer key
+						</li>
+						<li>
+							Worked with 5-8 students per shift in 1-2 hour sessions
+						</li>
+					</ul>
+				</div>
+
+				<h3 class = "resume-header">INVOLVEMENT</h3>
+				<hr>
+				<div class = "resume-block">
+					<div class = "resume-left">
+						<strong>Libertyville High School Math Team</strong><br>
+						<em>Calculator-Team Leader (2019-2020)</em>
+					</div>
+					<div class = "resume-right">
+						August 2016-May 2020
+					</div>
+					<div class = "clearfloat"></div>
+					<ul>
+						<li>
+							Organized and lead weekly group practice tests with 5 other members 
+						</li>
+						<li>
+							Coached team members on how to proficiently use their calculators' full functionality
+						</li>
+					</ul>
+				</div>
+
+			</div>
 			<span>
-				<em>As of April 2021.</em><br>
-				<a href = "resume.pdf" id = "resume-open" target = "_blank" style = "color:black;">
-					Click <span style = "text-decoration: underline;">HERE</span> to open in a new tab!
-				</a><br>
+				<em>As of September 2021.</em><br>
 				<a href = "resume.pdf" download = "FanSamantha_Resume" style = "color:black;">
-					Click <span style = "text-decoration: underline;">HERE</span> to download a copy!
+					Click <span style = "text-decoration: underline;">HERE</span> to download a PDF copy!
 				</a>
 			</span>
 		</div>
